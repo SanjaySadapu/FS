@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ANITS Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+<header>
+<h2>Anil Neerukonda Institute of Technology & Sciences</h2>
+<h3>Campus Placement Portal</h3>
+<nav>
+<a href="#">Home</a><a href="#">About</a><a href="#">Apply Job</a>
+<a href="#">Results</a><a href="#">Upcoming Placements</a><a href="#">Contact</a>
+</nav>
+</header>
+<div class="content">
+<h1 style="color:green">Login Successful!</h1>
+<h3 id="welcome"></h3>
+<p id="time"></p>
+<div class="notice">
+<h4>Important Notice</h4>
+<ul>
+<li>Please contact the Training & Placement Office regularly.</li>
+<li>Stay informed about placement updates.</li>
+<li>Check email for announcements.</li>
+<li>Attend placement talks and interviews.</li>
+</ul>
+</div>
+</div>
+<script>
+document.getElementById("welcome").innerText="Welcome to ANITS Central Placement Portal";
+document.getElementById("time").innerText="Login Time : "+new Date().toLocaleString();
+let t;
+function reset(){clearTimeout(t);t=setTimeout(()=>location.href='index.html',10000);}
+document.addEventListener('mousemove',reset);reset();
+</script>
+</body>
+</html>
