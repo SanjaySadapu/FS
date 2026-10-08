@@ -1,0 +1,16 @@
+{
+  "name": "skyroute-booking",
+  "version": "1.0.0",
+  "description": "Mini web application - Airline booking system using Node.js, Express.js and JSON as database",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": ["nodejs", "express", "airline", "booking", "json"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

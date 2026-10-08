@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign in — SkyRoute Airways</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="login">
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="/"><span class="logo-mark">✈</span> SkyRoute Airways</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/register">Create account</a>
+      <a href="/login" class="active">Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<main class="auth">
+  <div class="wrap" style="display:grid;place-items:center">
+    <div class="form-card narrow">
+      <div class="form-head">
+        <h1>Sign in</h1>
+        <p>Use the username or email you registered with.</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="msg" id="formMsg"></div>
+
+        <div class="field">
+          <label for="loginId">Username or email</label>
+          <input type="text" id="loginId" name="loginId" placeholder="ravi123" autocomplete="username" />
+          <div class="error" data-error-for="loginId"></div>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" />
+          <div class="error" data-error-for="password"></div>
+        </div>
+
+        <button type="submit" class="btn btn-block" id="submitBtn">Sign in</button>
+
+        <div class="form-foot">
+          <small>No account yet? <a href="/register">Register</a></small>
+          <small><a href="/">Back to home</a></small>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

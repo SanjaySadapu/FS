@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your trips — SkyRoute Airways</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="dashboard">
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="/dashboard"><span class="logo-mark">✈</span> SkyRoute Airways</a>
+    <nav class="nav">
+      <a href="#search" class="active">Book a flight</a>
+      <a href="#trips">My trips</a>
+      <a href="#profile">Profile</a>
+      <button class="btn btn-ghost btn-small" id="logoutBtn">Log out</button>
+    </nav>
+  </div>
+</header>
+
+<main class="dash">
+  <div class="wrap">
+
+    <div class="dash-head">
+      <div>
+        <h1 id="greeting">Welcome back</h1>
+        <p id="greetingSub">Where are you flying next?</p>
+      </div>
+      <a class="btn btn-outline btn-small" href="/">View public site</a>
+    </div>
+
+    <div class="pass">
+      <div class="stat"><span>Member</span><b id="pName">—</b></div>
+      <div class="stat"><span>SkyMiles</span><b id="pMiles">0</b></div>
+      <div class="stat"><span>Trips booked</span><b id="pTrips">0</b></div>
+      <div class="stat"><span>Status</span><b><span class="tier-badge" id="pTier">Blue</span></b></div>
+    </div>
+
+    <!-- ---------- Search ---------- -->
+    <section class="panel" id="search">
+      <h2>Search flights</h2>
+      <p class="sub">Pick a route and a date. Leave a field on "Any" to see everything we fly.</p>
+
+      <div class="search-grid">
+        <div class="field">
+          <label for="from">From</label>
+          <select id="from">
+            <option value="">Any origin</option>
+            <option value="HYD">Hyderabad (HYD)</option>
+            <option value="DEL">Delhi (DEL)</option>
+            <option value="BOM">Mumbai (BOM)</option>
+            <option value="BLR">Bengaluru (BLR)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="to">To</label>
+          <select id="to">
+            <option value="">Any destination</option>
+            <option value="DEL">Delhi (DEL)</option>
+            <option value="BOM">Mumbai (BOM)</option>
+            <option value="BLR">Bengaluru (BLR)</option>
+            <option value="MAA">Chennai (MAA)</option>
+            <option value="CCU">Kolkata (CCU)</option>
+            <option value="GOI">Goa (GOI)</option>
+            <option value="DXB">Dubai (DXB)</option>
+            <option value="SIN">Singapore (SIN)</option>
+            <option value="HYD">Hyderabad (HYD)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Travel date</label>
+          <input type="date" id="date" />
+        </div>
+        <div class="field">
+          <label for="pax">Passengers</label>
+          <select id="pax">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cabin">Cabin</label>
+          <select id="cabin">
+            <option>Economy</option>
+            <option>Premium</option>
+            <option>Business</option>
+          </select>
+        </div>
+        <div class="field">
+          <button class="btn btn-block" id="searchBtn">Search flights</button>
+        </div>
+      </div>
+
+      <div class="msg" id="searchMsg" style="margin-top:18px"></div>
+      <div id="results" style="margin-top:20px"></div>
+    </section>
+
+    <!-- ---------- My trips ---------- -->
+    <section class="panel" id="trips">
+      <h2>My trips</h2>
+      <p class="sub">Every booking made from this account, newest first.</p>
+      <div id="tripList"></div>
+    </section>
+
+    <!-- ---------- Profile ---------- -->
+    <section class="panel" id="profile">
+      <h2>Traveller profile</h2>
+      <p class="sub">These details are pulled from your registration record.</p>
+      <div class="cards" id="profileCards"></div>
+    </section>
+
+  </div>
+</main>
+
+<!-- confirmation modal -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="form-head">
+      <h1 id="modalTitle">Booking confirmed</h1>
+      <p id="modalSub">Keep your PNR handy at check-in.</p>
+    </div>
+    <div class="modal-body">
+      <div id="modalBody"></div>
+      <button class="btn btn-block btn-teal" id="modalClose" style="margin-top:18px">Done</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 SkyRoute Airways</span>
+    <span>Signed in as <b id="footUser">—</b></span>
+  </div>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

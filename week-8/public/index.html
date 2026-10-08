@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SkyRoute Airways — book your next flight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="home">
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="/"><span class="logo-mark">✈</span> SkyRoute Airways</a>
+    <nav class="nav">
+      <a href="/" class="active">Home</a>
+      <a href="#routes">Routes</a>
+      <a href="#contact">Contact</a>
+      <a href="/register">Create account</a>
+      <a class="btn btn-ghost btn-small" href="/login">Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Seats that go<br />where you do.</h1>
+      <p class="lede">Search live schedules, hold a seat in seconds, and carry your whole trip in one PNR. SkyRoute flies 38 routes across India, the Gulf and Southeast Asia.</p>
+      <div class="hero-actions">
+        <a class="btn" href="/register">Create an account</a>
+        <a class="btn btn-ghost" href="/login">Sign in to book</a>
+      </div>
+      <div class="hero-stats">
+        <div><span>38</span><small>routes flown daily</small></div>
+        <div><span>96.4%</span><small>on-time arrivals</small></div>
+        <div><span>2.1M</span><small>seats sold last year</small></div>
+      </div>
+    </div>
+
+    <div class="board" id="board">
+      <div class="board-head">
+        <span><span class="dot"></span>Departures — live</span>
+        <span id="boardClock">--:--</span>
+      </div>
+      <div id="boardRows">
+        <div class="board-row">
+          <span class="board-cell">SR 101</span>
+          <span class="board-route">Hyderabad → Delhi</span>
+          <span class="board-time">06:15</span>
+          <span class="board-status">On time</span>
+        </div>
+        <div class="board-row">
+          <span class="board-cell">SR 205</span>
+          <span class="board-route">Hyderabad → Mumbai</span>
+          <span class="board-time">07:00</span>
+          <span class="board-status">Boarding</span>
+        </div>
+        <div class="board-row">
+          <span class="board-cell">SR 310</span>
+          <span class="board-route">Hyderabad → Bengaluru</span>
+          <span class="board-time">09:30</span>
+          <span class="board-status late">Delayed 20m</span>
+        </div>
+        <div class="board-row">
+          <span class="board-cell">SR 701</span>
+          <span class="board-route">Hyderabad → Dubai</span>
+          <span class="board-time">03:55</span>
+          <span class="board-status">On time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="routes">
+  <div class="wrap">
+    <h2>Popular routes this week</h2>
+    <p class="sub">Starting fares in economy, all taxes included. Sign in to see live seat availability.</p>
+    <div class="routes" id="routeList">
+      <div class="route-card">
+        <div><b>HYD → DEL</b><small>2h 10m · non-stop</small></div>
+        <div class="route-price">₹4,299</div>
+      </div>
+      <div class="route-card">
+        <div><b>HYD → BOM</b><small>1h 20m · non-stop</small></div>
+        <div class="route-price">₹3,499</div>
+      </div>
+      <div class="route-card">
+        <div><b>HYD → BLR</b><small>1h 05m · non-stop</small></div>
+        <div class="route-price">₹2,799</div>
+      </div>
+      <div class="route-card">
+        <div><b>HYD → DXB</b><small>3h 45m · non-stop</small></div>
+        <div class="route-price">₹14,250</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <h2>How booking works</h2>
+    <p class="sub">Four steps from the home page to a boarding pass.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="icon">📝</span>
+        <h3>1. Register</h3>
+        <p>Give us your traveller details once. They are saved to your profile for every future booking.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🔐</span>
+        <h3>2. Sign in</h3>
+        <p>Use your username or email. We check the credentials against your stored account before letting you through.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🔎</span>
+        <h3>3. Search and book</h3>
+        <p>Pick a route and date, choose a cabin, and confirm. You get a six-character PNR straight away.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🎫</span>
+        <h3>4. Manage the trip</h3>
+        <p>View every booking on your dashboard, cancel a seat if plans change, and watch your SkyMiles add up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <h2>Talk to us</h2>
+    <p class="sub">Reservations desk is open every day, 06:00 to 23:00 IST.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Reservations</h3>
+        <p>1800 200 4455<br />book@skyroute.example</p>
+      </div>
+      <div class="card">
+        <h3>Head office</h3>
+        <p>Terminal 2, Rajiv Gandhi International Airport,<br />Shamshabad, Hyderabad 500409</p>
+      </div>
+      <div class="card">
+        <h3>Baggage help</h3>
+        <p>Report at the airport desk within 24 hours of landing, or write to baggage@skyroute.example</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 SkyRoute Airways. Built for the Full Stack Web Development lab.</span>
+    <span><a href="/register">Register</a> · <a href="/login">Sign in</a></span>
+  </div>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
